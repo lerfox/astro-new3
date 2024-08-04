@@ -18,6 +18,8 @@ const goal = 3;
 const skillColor = "navy";
 const fontWeight = "bold";
 const textCase = "uppercase";
+
+import windowImage from "../assets/panox2.jpg";
 ---
 <html lang="es">
   <head>
@@ -42,6 +44,9 @@ const textCase = "uppercase";
     <a href="/blog/">Blog</a>
     <h1>{pageTitle}</h1>
     <h2>... ¡y mi nuevo sitio Astro!</h2>
+
+    <img src={windowImage.src} alt="photo-1" width="400"/>
+    
 
     <p>Estoy trabajando en el tutorial introductorio de Astro. Esta es la segunda página de mi sitio web, ¡y es la primera que he construido yo mismo!</p>
 
