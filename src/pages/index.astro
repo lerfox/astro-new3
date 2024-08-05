@@ -1,31 +1,18 @@
 ---
-import '../styles/global.css';
-
-const pageTitle = 'Página de Inicio';
-
-import Header from '../components/Header.astro';
-
-import Footer from '../components/Footer.astro';
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Página de inicio";
+import windowImage from "../assets/diapo-el-frio.jpg";
 ---
+<BaseLayout>
+  <h2>Mi impresionante subtítulo del blog</h2>
+</BaseLayout>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<Header />
-		<h1>{pageTitle}</h1>
-		<Footer />
+<img src={windowImage.src} alt="photo-2" />
 
-		<script>
-			import "../scripts/menu.js";
-		</script>
-  </body>
-</html>
-	</body>
-</html>
+<style>
+  img{
+    margin-top: 70px;
+    border-radius: 7px;
+    width: 100%;
+  }
+</style>
