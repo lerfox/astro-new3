@@ -5,8 +5,8 @@ const pageTitle = 'Sobre mi'
 const identity = {
   firstName: "Luis Elias",
   country: "Venezuela",
-  occupation: "Photographer & Lawyer",
-  hobbies: ["fotografia", "observación de aves", "asuntos legales"],
+  occupation: "Fotógrafo & Abogado",
+  hobbies: ["fotografia", "lectura", "asuntos legales"],
 };
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Redacción de documentos"];
@@ -20,6 +20,10 @@ const fontWeight = "bold";
 const textCase = "uppercase";
 
 import windowImage from "../assets/panox2.jpg";
+
+import Header from '../components/Header.astro';
+
+import Footer from '../components/Footer.astro';
 ---
 <html lang="es">
   <head>
@@ -39,13 +43,13 @@ import windowImage from "../assets/panox2.jpg";
     </style>
   </head>
   <body>
-    <a href="/">Inicio</a>
-    <a href="/about/">Sobre mi</a>
-    <a href="/blog/">Blog</a>
+   
+    <Header />
+
     <h1>{pageTitle}</h1>
     <h2>... ¡y mi nuevo sitio Astro!</h2>
 
-    <img src={windowImage.src} alt="photo-1" width="400"/>
+    <img src={windowImage.src} alt="photo-1" width="300"/>
     
 
     <p>Estoy trabajando en el tutorial introductorio de Astro. Esta es la segunda página de mi sitio web, ¡y es la primera que he construido yo mismo!</p>
@@ -70,6 +74,15 @@ import windowImage from "../assets/panox2.jpg";
 {finished && <p>¡He terminado este tutorial!</p>}
 
 {goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
+
+<Footer />
+</body>
+</html>
+
+
+<script>
+  import "../scripts/menu.js";
+</script>
   </body>
 </html>
 
